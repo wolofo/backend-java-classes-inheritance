@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>nl.novi</groupId>
+  <artifactId>hello-world</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>HelloWorld</name>
+
+  <properties>
+    <!-- Aangeven hoe de bestand-encoding is -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <!-- Aangeven welke file de main methode heeft zodat deze uitgevoerd kan worden-->
+    <exec.mainClass>Main</exec.mainClass>
+
+    <!-- Aangeven welke java versie we willen gebruiken-->
+    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.9.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <!-- JUnit5 heeft minimaal deze versie van de SurefIre plugin nodig -->
+        <version>2.22.0</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
