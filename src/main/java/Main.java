@@ -1,7 +1,12 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello world");
-    }
+        Customer customer = new Customer("Frodo", "Balings");
 
+        customer.printName();
+
+        Customer customer2 = new Customer("Samwise", "Gamgee");
+
+        customer2.printName();
+    }
 }
