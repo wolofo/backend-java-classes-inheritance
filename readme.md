@@ -109,7 +109,7 @@ public void pay(int amount) {
 }
 ```
 De aanroep naar `super.pay()` betekend hier dat de methode `pay` van de super klasse (CreditCard) wordt aangeroepen.
-Zorg er hier voor dat het amount 10% lager wordt (door bijvoorbeeld amount * 0.9 te doen).
+Zorg er hier voor dat het amount 10% lager wordt (door bijvoorbeeld (int)(amount * 0.9) te doen).
 Je zult nu zien dat als je in Main zowel `customer` als `customer2` beide een andere creditcard geeft met een amount 0, en op beide `pay` aanroept met het bedrag 100, de schuld op beide kaarten nu anders zal zijn.
 
 
