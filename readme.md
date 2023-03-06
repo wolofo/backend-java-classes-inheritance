@@ -28,7 +28,7 @@ mvnw.cmd clean compile exec:java
 1. Maak een nieuwe klasse aan genaamd `Customer`. Zorg er ook voor dat deze klasse een property `name` heeft van het type String.
 2. Maak in de Main klasse een variabele genaamd `customer` aan, van het type `Customer` (de klasse die we net gemaakt hebben) met behulp van het `new` keyword.
 3. Na het aanmaken van deze nieuwe instantie kan je de `name`-property toewijzen, geef dit je eigen naam.
-4. Je kan daarna als het goed is de naam printen door `System.out.println(customer.naam);` daaronder te zetten. Als het goed is wordt nu je naam geprint.
+4. Je kan daarna als het goed is de naam printen door `System.out.println(customer.name);` daaronder te zetten. Als het goed is wordt nu je naam geprint.
 5. Onder de `System.out.println(klant.naam);` maak een tweede variabele genaamd `customer2` van het type `Customer`. Geef deze een andere naam, en print ook deze.
 
 ### Opdracht 2
