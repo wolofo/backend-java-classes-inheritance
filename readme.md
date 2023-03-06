@@ -30,20 +30,26 @@ mvnw.cmd clean compile exec:java
 3. Na het aanmaken van deze nieuwe instantie kan je de `name`-property toewijzen, geef dit je eigen naam.
 4. Je kan daarna als het goed is de naam printen door `System.out.println(customer.name);` daaronder te zetten. Als het goed is wordt nu je naam geprint.
 5. Onder de `System.out.println(customer.name);` maak een tweede variabele genaamd `customer2` van het type `Customer`. Geef deze een andere naam, en print ook deze.
+6. Breidt nu de `Customer` klasse uit met een `lastName` property van type `String` en een `customerNumber` property van type `int`.
+7. Voeg aan `Customer` ook een `printName()` methode to. Deze methode heeft geen parameters nodig en mag `void` returnen. In de body van de methode zet je `System.out.println("Customer " + name);`
+8. Maak twee Constructors. Een met de signature `(String, String)` en een met de signature `(String, String, int)`. _Tip: de ene constructor heeft dus 3 parameters, de andere 2 parameters_.
+9. In `Main` zie je nu een foutmelding staan bij `()`-haakjes van `new Customer()`. De default Constructor is namelijk komen te vervallen, omdat je 2 custom Constructors hebt gemaakt. Je mag nu voor zowel `customer` als `customer2` een van de nieuwe Constructors gaan gebruiken. 
+10. Verwijder in `Main` de regels `customer.name = ...` en `customer2.name=...`, dit gebeurt nu namelijk al in de constructor.
+11. Vervang in `Main` ook `System.out.println(customer.name);` en `System.out.println(customer2.name);` door de `printName()` methode van die klassen aan te roepen
 
 ### Opdracht 2
 
 Een Customer moet natuurlijk kunnen betalen! Dit kan heel goed met een creditcard...
 
 1. Maak een klasse `CreditCard` en geef deze een private property `int debt`, geef deze getters en setters en een constructor waarin deze property is opgenomen.
-2. Voeg nu een property `creditcard` toe aan de `Customer` klasse, maak hier ook getters en setters voor en voeg de property toe aan beide constructors.
+2. Voeg nu een private property `creditcard` van type `CreditCard` toe aan de `Customer` klasse, maak hier ook getters en setters voor en voeg de property toe aan beide constructors.
 3. Pas ook de main methode aan om de 2 customers een `CreditCard` te geven.
 
 Deze aanroep zou er dan ongeveer zo uit moeten zien:
 `Customer customer = new Customer("Frodo", "Balings", new CreditCard(100));`
 
-4. Voeg een methode toe `void pay(int amount)` toe aan de CreditCard klasse. Deze methode moet de `CreditCard` een nieuw bedrag geven gelijk aan het oude bedrag + amount te doen (een CreditCard verzamelt namelijk schuld). Je kan nu in de main methode een betaling doen door
-`customer.getCreditCard().pay(10)` te doen, en de huidige schuld is te printen door `System.out.println(customer.getCreditCard().getDebt());` te doen.
+4. Voeg een methode `void pay(int amount)` toe aan de CreditCard klasse. Deze methode moet de `CreditCard` een nieuw bedrag geven gelijk aan het oude bedrag + amount (een CreditCard verzamelt namelijk schuld). Je kan nu in de main methode een betaling doen door
+`customer.getCreditCard().pay(10)` te doen, en de huidige schuld kun je printen door `System.out.println(customer.getCreditCard().getDebt());` te doen.
 
 ### Opdracht 3
 
